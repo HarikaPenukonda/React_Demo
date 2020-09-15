@@ -8,12 +8,19 @@ class App extends Component {
       { name: 'Harika', age:25 },
       { name: 'Sindhu', age:23 },
       { name: 'Anjali', age:21 }
-
-    ]
+    ],
+    otherState: 'some other value'
   }
 
   switchNameHandler = () => {
-    console.log("was Logged!");
+    //console.log("was Logged!");
+    //this.state.persons[0].name = 'Penukonda'; // Do not mutate state directly. Use setState()  react/no-direct-mutation-state
+    this.setState({
+      persons: [
+        { name: 'Penukonda', age:25 },
+        { name: 'Sindhu', age:23 },
+        { name: 'Penukonda', age:21 }
+      ]})
   }
 
   render() {
